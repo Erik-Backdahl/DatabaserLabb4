@@ -1,3 +1,7 @@
+using System.IO.Compression;
+using ErikLabb4.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace BankApp.HelperClasses
 {
     class GetUserInput
@@ -13,7 +17,7 @@ namespace BankApp.HelperClasses
                 }
                 else
                 {
-                    Console.WriteLine("Du måste skriva in en giltig siffra");
+                    Console.WriteLine("You must enter a valid integer");
                 }
             }
         }
@@ -29,10 +33,11 @@ namespace BankApp.HelperClasses
                 }
                 else
                 {
-                    Console.WriteLine("Du måste skriva in en giltig string");
+                    Console.WriteLine("You must enter a valid string");
                 }
 
             }
         }
     }
+
 }

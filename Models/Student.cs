@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ErikLabb3.Models;
+namespace ErikLabb4.Models;
 
 public partial class Student
 {
@@ -11,7 +11,7 @@ public partial class Student
 
     public string LastName { get; set; } = null!;
 
-    public int PersonalNumber { get; set; }
+    public string PersonalNumber { get; set; } = null!;
 
     public int ClassId { get; set; }
 

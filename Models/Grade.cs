@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ErikLabb3.Models;
+namespace ErikLabb4.Models;
 
 public partial class Grade
 {

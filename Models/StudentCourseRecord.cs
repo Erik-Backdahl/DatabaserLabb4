@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ErikLabb3.Models;
+namespace ErikLabb4.Models;
 
 public partial class StudentCourseRecord
 {
@@ -15,11 +15,9 @@ public partial class StudentCourseRecord
 
     public int? GradedBy { get; set; }
 
-    public DateOnly GradeSetDate { get; set; }
-
     public DateOnly StartDate { get; set; }
 
-    public DateOnly EndDate { get; set; }
+    public DateOnly? EndDate { get; set; }
 
     public virtual Course Course { get; set; } = null!;
 
