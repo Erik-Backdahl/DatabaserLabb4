@@ -15,6 +15,8 @@ public partial class StudentCourseRecord
 
     public int? GradedBy { get; set; }
 
+    public DateOnly? GradeSet { get; set; }
+
     public DateOnly StartDate { get; set; }
 
     public DateOnly? EndDate { get; set; }

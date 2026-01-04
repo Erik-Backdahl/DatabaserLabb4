@@ -39,7 +39,7 @@ public partial class SchoolContext : DbContext
     {
         modelBuilder.Entity<Class>(entity =>
         {
-            entity.HasKey(e => e.ClassId).HasName("PK__classes__FDF47986E744A80C");
+            entity.HasKey(e => e.ClassId).HasName("PK__classes__FDF47986806258F5");
 
             entity.ToTable("classes");
 
@@ -65,7 +65,7 @@ public partial class SchoolContext : DbContext
 
         modelBuilder.Entity<Classroom>(entity =>
         {
-            entity.HasKey(e => e.RoomId).HasName("PK__classroo__19675A8ADCF5A26F");
+            entity.HasKey(e => e.RoomId).HasName("PK__classroo__19675A8A3955E375");
 
             entity.ToTable("classrooms");
 
@@ -76,7 +76,7 @@ public partial class SchoolContext : DbContext
 
         modelBuilder.Entity<Course>(entity =>
         {
-            entity.HasKey(e => e.CourseId).HasName("PK__courses__8F1EF7AECF4FCB24");
+            entity.HasKey(e => e.CourseId).HasName("PK__courses__8F1EF7AE5FDA2B23");
 
             entity.ToTable("courses");
 
@@ -102,7 +102,7 @@ public partial class SchoolContext : DbContext
 
         modelBuilder.Entity<Department>(entity =>
         {
-            entity.HasKey(e => e.DepartmentId).HasName("PK__departme__C2232422E2084D08");
+            entity.HasKey(e => e.DepartmentId).HasName("PK__departme__C22324221C5B7F0C");
 
             entity.ToTable("departments");
 
@@ -114,7 +114,7 @@ public partial class SchoolContext : DbContext
 
         modelBuilder.Entity<Grade>(entity =>
         {
-            entity.HasKey(e => e.Grade1).HasName("PK__grades__28A8317726B02BB1");
+            entity.HasKey(e => e.Grade1).HasName("PK__grades__28A83177487A8EE0");
 
             entity.ToTable("grades");
 
@@ -127,7 +127,7 @@ public partial class SchoolContext : DbContext
 
         modelBuilder.Entity<Staff>(entity =>
         {
-            entity.HasKey(e => e.StaffId).HasName("PK__staff__1963DD9CAD8BBEDA");
+            entity.HasKey(e => e.StaffId).HasName("PK__staff__1963DD9C2CFF4135");
 
             entity.ToTable("staff");
 
@@ -156,11 +156,11 @@ public partial class SchoolContext : DbContext
 
         modelBuilder.Entity<Student>(entity =>
         {
-            entity.HasKey(e => e.StudentId).HasName("PK__students__2A33069A1260293F");
+            entity.HasKey(e => e.StudentId).HasName("PK__students__2A33069A3B274D16");
 
             entity.ToTable("students");
 
-            entity.HasIndex(e => e.PersonalNumber, "UQ__students__24E2EDD297EA37CC").IsUnique();
+            entity.HasIndex(e => e.PersonalNumber, "UQ__students__24E2EDD2B8F82FF5").IsUnique();
 
             entity.Property(e => e.StudentId).HasColumnName("student_id");
             entity.Property(e => e.ClassId).HasColumnName("class_id");
@@ -182,7 +182,7 @@ public partial class SchoolContext : DbContext
 
         modelBuilder.Entity<StudentCourseRecord>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__student___3213E83FF8B96DEA");
+            entity.HasKey(e => e.Id).HasName("PK__student___3213E83F6623892B");
 
             entity.ToTable("student_course_record");
 
@@ -191,6 +191,7 @@ public partial class SchoolContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CourseId).HasColumnName("course_id");
             entity.Property(e => e.EndDate).HasColumnName("end_date");
+            entity.Property(e => e.GradeSet).HasColumnName("grade_set");
             entity.Property(e => e.GradedBy).HasColumnName("graded_by");
             entity.Property(e => e.StartDate).HasColumnName("start_date");
             entity.Property(e => e.StudentFinalGrade)
